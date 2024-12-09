@@ -6,7 +6,7 @@ import {Dropdown1} from '../../content/dropdown/Dropdown1'
 type Props = {
   className: string
   items?: number
-  latestTrends: string
+  latestTrends?: string
 }
 
 const ListsWidget4: FC<Props> = ({items = 6, latestTrends}) => {
@@ -16,11 +16,17 @@ const ListsWidget4: FC<Props> = ({items = 6, latestTrends}) => {
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold text-gray-900'>Trends</span>
-          <span className='text-muted mt-1 fw-semibold fs-7'>Dernier(s) {latestTrends}</span>
+          {
+            latestTrends && (
+              
+              <span className='text-muted mt-1 fw-semibold fs-7'>Dernier(s) {latestTrends}</span>
+            )
+          }
         </h3>
         <div className='card-toolbar'>
           {/* begin::Menu */}
           <button
+            title='See details'
             type='button'
             className='btn btn-sm btn-icon btn-color-primary btn-active-light-primary'
             data-kt-menu-trigger='click'

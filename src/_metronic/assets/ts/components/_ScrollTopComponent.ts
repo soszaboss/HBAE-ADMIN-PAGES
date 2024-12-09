@@ -37,7 +37,7 @@ class ScrollTopComponent {
   }
 
   private _handlers = () => {
-    let timer: number
+    let timer: number = 0
     window.addEventListener('scroll', () => {
       throttle(timer, () => {
         this._scroll()
@@ -50,7 +50,7 @@ class ScrollTopComponent {
     })
   }
 
-  private _scroll = () => {
+  private  _scroll = () => {
     const offset = parseInt(this._getOption('offset') as string)
     const pos = getScrollTop() // current vertical position
     if (pos > offset) {
