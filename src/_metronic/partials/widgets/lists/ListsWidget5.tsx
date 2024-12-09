@@ -5,8 +5,8 @@ import {Dropdown1} from '../../content/dropdown/Dropdown1'
 
 type Props = {
   className: string
-  activityName: string
-  activityNumber: number
+  activityName?: string
+  activityNumber?: number
 }
 
 const ListsWidget5: React.FC<Props> = ({className, activityName, activityNumber}) => {
@@ -16,11 +16,12 @@ const ListsWidget5: React.FC<Props> = ({className, activityName, activityNumber}
       <div className='card-header align-items-center border-0 mt-4'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='fw-bold mb-2 text-gray-900'>Activité(s)</span>
-          <span className='text-muted fw-semibold fs-7'>{activityNumber} {activityName}</span>
+          <span className='text-muted fw-semibold fs-7'>{activityNumber ?? ""} {activityName ?? ""}</span>
         </h3>
         <div className='card-toolbar'>
           {/* begin::Menu */}
           <button
+            title='See details'
             type='button'
             className='btn btn-sm btn-icon btn-color-primary btn-active-light-primary'
             data-kt-menu-trigger='click'
