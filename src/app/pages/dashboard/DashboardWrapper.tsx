@@ -37,7 +37,7 @@ const DashboardPage = () => (
       <div className='col-xl-4'>
         <MixedWidget15 className='card-xl-stretch mb-xl-10' backGroundColor='#CBD4F4' />
       </div>
-      {/*end::Col*/}
+      {/* end::Col */}
     </div>
     {/*end::Row*/}
 

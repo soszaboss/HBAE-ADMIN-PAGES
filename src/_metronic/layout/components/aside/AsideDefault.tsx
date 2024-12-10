@@ -22,7 +22,7 @@ const AsideDefault = () => {
       data-kt-drawer-toggle='#kt_aside_toggle'
     >
       {/* begin::Brand */}
-      <div className='aside-logo flex-column-auto px-9 mb-9' id='kt_aside_logo'>
+      <div className='aside-logo flex-column-auto px-9' id='kt_aside_logo'>
         {/* begin::Logo */}
         <Link to='/dashboard'>
           {mode === 'light' && (
