@@ -19,7 +19,7 @@ export function AsideMenuMain() {
         </div>
       </div>      
       <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/gestion/users'
         icon='user'
         title='Utilisateurs'
         fontIcon='bi-layers'

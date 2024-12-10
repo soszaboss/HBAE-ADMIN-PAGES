@@ -11,12 +11,17 @@ import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
 import EquipementsWrapper from '../pages/equipements/EquipementsPageWrapper'
 
 const PrivateRoutes = () => {
+
+  // template imports 
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
   const WizardsPage = lazy(() => import('../modules/wizards/WizardsPage'))
   const AccountPage = lazy(() => import('../modules/accounts/AccountPage'))
   const WidgetsPage = lazy(() => import('../modules/widgets/WidgetsPage'))
   const ChatPage = lazy(() => import('../modules/apps/chat/ChatPage'))
-  const UsersPage = lazy(() => import('../modules/apps/user-management/UsersPage'))
+  const UsersPageTemp = lazy(() => import('../modules/apps/user-management/UsersPage'))
+
+  // Our application imports
+  const UsersPage = lazy(() => import('../modules/apps/gestion/users/page'))
 
   return (
     <Routes>
@@ -28,6 +33,7 @@ const PrivateRoutes = () => {
         <Route path='equipements' element={<EquipementsWrapper />} />
         <Route path='builder' element={<BuilderPageWrapper />} />
         <Route path='menu-test' element={<MenuTestPage />} />
+        <Route path='/gestion/users' element={<UsersPage />} />
         {/* Lazy Modules */}
         <Route
           path='crafted/pages/profile/*'
@@ -73,7 +79,7 @@ const PrivateRoutes = () => {
           path='apps/user-management/*'
           element={
             <SuspensedView>
-              <UsersPage />
+              <UsersPageTemp />
             </SuspensedView>
           }
         />
