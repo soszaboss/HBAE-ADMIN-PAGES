@@ -26,6 +26,7 @@ const HelpDrawer = () => {
 
           <div className='card-toolbar'>
             <button
+              title='Close'
               type='button'
               className='btn btn-sm btn-icon explore-btn-dismiss me-n5'
               id='kt_help_close'
