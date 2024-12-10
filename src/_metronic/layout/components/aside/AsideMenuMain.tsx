@@ -25,25 +25,25 @@ export function AsideMenuMain() {
         fontIcon='bi-layers'
       />
       <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/gestion/abonnements'
         icon='price-tag'
         title='Abonnements'
         fontIcon='bi-layers'
       />
         <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/gestion/activities'
         icon='parcel-tracking'
         title='Activités'
         fontIcon='bi-layers'
       />
               <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/gestion/parteners'
         icon='support-24'
         title='Partenaires'
         fontIcon='bi-layers'
       />
                     <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/gestion/events'
         icon='calendar-2'
         title='Evenements'
         fontIcon='bi-layers'
@@ -54,19 +54,19 @@ export function AsideMenuMain() {
         </div>
       </div>    
       <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/settings/authorisations'
         icon='lock'
         title='Autorisation'
         fontIcon='bi-layers'
       />
             <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/settings/subscriptions-and-credits'
         icon='setting-4'
         title='Abonnements et credits'
         fontIcon='bi-layers'
       />
                   <AsideMenuItem
-        to='/apps/user-management/users'
+        to='/settings/audit-and-logs'
         icon='some-files'
         title='Audit et logs'
         fontIcon='bi-layers'
