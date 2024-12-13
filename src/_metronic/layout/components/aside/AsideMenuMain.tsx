@@ -8,7 +8,7 @@ export function AsideMenuMain() {
   return (
     <>
       <AsideMenuItem
-        to='/dashboard'
+        to='/'
         icon='chart-simple'
         title={intl.formatMessage({id: 'MENU.DASHBOARD'})}
         fontIcon='bi-app-indicator'
