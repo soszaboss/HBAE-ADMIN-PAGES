@@ -23,6 +23,8 @@ const DashboardPage = () => (
       </div>
       {/*end::Col*/}
 
+      
+
       {/*begin::Col*/}
       <div className='col-xl-4'>
         <MixedWidget14
