@@ -25,21 +25,19 @@ const AsideDefault = () => {
       <div className='aside-logo flex-column-auto px-9' id='kt_aside_logo'>
         {/* begin::Logo */}
         <Link to='/dashboard'>
-          {mode === 'light' && (
+          {mode === 'light' ? (
             <img
               alt='Logo'
               className='h-100px logo theme-light-show'
               src={toAbsoluteUrl('media/logos/HBAE_SVG_variant_2.svg')}
             />
-          )}
-
-          {mode === 'dark' && (
-            <img
+          ) :
+          <img
               alt='Logo'
               className='h-100px logo theme-dark-show'
               src={toAbsoluteUrl('media/logos/HBAE_SVG.svg')}
             />
-          )}
+          }
         </Link>
         {/* end::Logo */}
       </div>

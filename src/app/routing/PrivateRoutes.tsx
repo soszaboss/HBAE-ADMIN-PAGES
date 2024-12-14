@@ -9,6 +9,11 @@ import {DisableSidebar} from '../../_metronic/layout/core'
 import {WithChildren} from '../../_metronic/helpers'
 import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
 import EquipementsWrapper from '../pages/equipements/EquipementsPageWrapper'
+import UsersPage from '../modules/apps/gestion/users/page'
+import SubscriptionPage from '../modules/apps/gestion/subscriptions/page'
+import ActivitiesPage from '../modules/apps/gestion/activity/page'
+import PartenersPage from '../modules/apps/gestion/partners/page'
+import EventsPage from '../modules/apps/gestion/evens/page'
 
 const PrivateRoutes = () => {
 
@@ -19,9 +24,9 @@ const PrivateRoutes = () => {
   const WidgetsPage = lazy(() => import('../modules/widgets/WidgetsPage'))
   const ChatPage = lazy(() => import('../modules/apps/chat/ChatPage'))
   const UsersPageTemp = lazy(() => import('../modules/apps/user-management/UsersPage'))
-
   // Our application imports
-  const UsersPage = lazy(() => import('../modules/apps/gestion/users/page'))
+  // const UsersPage = lazy(() => import('../modules/apps/gestion/users/page'))
+
 
   return (
     <Routes>
@@ -33,8 +38,13 @@ const PrivateRoutes = () => {
         <Route path='equipements' element={<EquipementsWrapper />} />
         <Route path='builder' element={<BuilderPageWrapper />} />
         <Route path='menu-test' element={<MenuTestPage />} />
-        <Route path='/gestion/users' element={<UsersPage />} />
         {/* Lazy Modules */}
+        
+        <Route path='/gestion/users/' element={<UsersPage />} />
+        <Route path='/gestion/subscriptions/' element={<SubscriptionPage />} />
+        <Route path='/gestion/activities/' element={<ActivitiesPage />} />
+        <Route path='/gestion/parteners/' element={<PartenersPage />} />
+        <Route path='/gestion/events/' element={<EventsPage />} />
         <Route
           path='crafted/pages/profile/*'
           element={

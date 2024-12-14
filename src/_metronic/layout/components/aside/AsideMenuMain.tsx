@@ -25,7 +25,7 @@ export function AsideMenuMain() {
         fontIcon='bi-layers'
       />
       <AsideMenuItem
-        to='/gestion/abonnements'
+        to='/gestion/subscriptions'
         icon='price-tag'
         title='Abonnements'
         fontIcon='bi-layers'
