@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
 import {useLocation} from 'react-router'
-import {checkIsActive, KTIcon, WithChildren} from '../../../helpers'
+import { KTIcon, WithChildren} from '../../../helpers'
 import {useLayout} from '../../core'
 
 type Props = {
@@ -21,7 +21,7 @@ const AsideMenuItem: React.FC<Props & WithChildren> = ({
   hasBullet = false,
 }) => {
   const {pathname} = useLocation()
-  const isActive = checkIsActive(pathname, to)
+  const isActive = pathname === to.replace(/\/$/, '')
   const {config} = useLayout()
   const {aside} = config
 
