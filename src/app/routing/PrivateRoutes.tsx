@@ -9,11 +9,11 @@ import {DisableSidebar} from '../../_metronic/layout/core'
 import {WithChildren} from '../../_metronic/helpers'
 import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
 import EquipementsWrapper from '../pages/equipements/EquipementsPageWrapper'
-import UsersPage from '../modules/apps/gestion/users/page'
-import SubscriptionPage from '../modules/apps/gestion/subscriptions/page'
-import ActivitiesPage from '../modules/apps/gestion/activity/page'
-import PartenersPage from '../modules/apps/gestion/partners/page'
-import EventsPage from '../modules/apps/gestion/evens/page'
+import UsersPage from '../modules/apps/management/users/page'
+import SubscriptionPage from '../modules/apps/management/subscriptions/page'
+import ActivitiesPage from '../modules/apps/management/activity/page'
+import PartenersPage from '../modules/apps/management/partners/page'
+import EventsPage from '../modules/apps/management/evens/page'
 
 const PrivateRoutes = () => {
 
@@ -40,11 +40,11 @@ const PrivateRoutes = () => {
         <Route path='menu-test' element={<MenuTestPage />} />
         {/* Lazy Modules */}
         
-        <Route path='/gestion/users/' element={<UsersPage />} />
-        <Route path='/gestion/subscriptions/' element={<SubscriptionPage />} />
-        <Route path='/gestion/activities/' element={<ActivitiesPage />} />
-        <Route path='/gestion/parteners/' element={<PartenersPage />} />
-        <Route path='/gestion/events/' element={<EventsPage />} />
+        <Route path='/management/users/' element={<UsersPage />} />
+        <Route path='/management/subscriptions/' element={<SubscriptionPage />} />
+        <Route path='/management/activities/' element={<ActivitiesPage />} />
+        <Route path='/management/parteners/' element={<PartenersPage />} />
+        <Route path='/management/events/' element={<EventsPage />} />
         <Route
           path='crafted/pages/profile/*'
           element={
@@ -94,7 +94,7 @@ const PrivateRoutes = () => {
           }
         />
         {/* Page Not Found */}
-        <Route path='*' element={<Navigate to='/error/404' />} />
+        <Route path='*' element={<Navigate to='/error/not-found' />} />
       </Route>
     </Routes>
   )
